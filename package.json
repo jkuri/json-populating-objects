@@ -1,0 +1,12 @@
+{
+  "name": "json-populating-objects-play",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Jan Kuri <jkuri88@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "harmony-proxy": "^1.0.0",
+    "harmony-reflect": "^1.4.5"
+  }
+}
