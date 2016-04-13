@@ -1,33 +1,16 @@
 #!/usr/bin/env node --harmony-proxies
 'use strict';
 
-let config = require('./lib/config');
+let Config = require('./lib/config');
 
-config.object1.object2.value = 'Hello World!';
-config.object1.object2.array.push('Hello World 1!');
-config.object1.object2.array.push('Hello World 2!');
-config.object1.object2.array.pop();
-config.object1.object2.array.push('Hello world 3!');
-config.object1.object2.array.reverse();
+let file = new Config('schemas/example.json');
 
-console.log(JSON.stringify(config, null, 2));
+file.config.obj = true;
+file.config.object1.object2.value = 'Hello World!';
+file.config.object1.object2.array.push('Hello World 1!');
+file.config.object1.object2.array.push('Hello World 2!');
+file.config.object1.object2.array.pop();
+file.config.object1.object2.array.push('Hello world 3!');
+file.config.object1.object2.array.reverse();
 
-// {
-//   "object1": {
-//     "type": "object",
-//     "object2": {
-//       "type": "object",
-//       "value": {
-//         "type": "string",
-//         "value": "Hello World!"
-//       },
-//       "array": {
-//         "type": "array",
-//         "enum": [
-//           "Hello world 3!",
-//           "Hello World 1!"
-//         ]
-//       }
-//     }
-//   }
-// }
+file.save();

@@ -1,5 +1,25 @@
 {
   "title": "Angular CLI Config",
   "type": "object",
-  
+  "obj": {
+    "type": "boolean",
+    "value": true
+  },
+  "object1": {
+    "type": "object",
+    "object2": {
+      "type": "object",
+      "value": {
+        "type": "string",
+        "value": "Hello World!"
+      },
+      "array": {
+        "type": "array",
+        "enum": [
+          "Hello world 3!",
+          "Hello World 1!"
+        ]
+      }
+    }
+  }
 }
