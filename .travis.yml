@@ -17,7 +17,7 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then source ~/.nvm/nvm-exec; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install nodejs npm; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo npm i npm -g && sudo npm install n -g && sudo n stable; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then npm install n -g && n stable; fi
   - nvm install $NODE_VERSION
   - npm config set spin false
   - npm config set progress false
