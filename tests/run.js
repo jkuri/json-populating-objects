@@ -1,4 +1,4 @@
-#!/usr/bin/env node --harmony-proxies
+#!/usr/bin/node --harmony-proxies
 'use strict';
 
 const Mocha = require('mocha');
