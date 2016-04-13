@@ -4,8 +4,11 @@
 let config = require('./lib/config');
 
 config.object1.object2.value = 'Hello World!';
-config.object1.object2.array.push('Hello World!');
+config.object1.object2.array.push('Hello World 1!');
 config.object1.object2.array.push('Hello World 2!');
+config.object1.object2.array.pop();
+config.object1.object2.array.push('Hello world 3!');
+config.object1.object2.array.reverse();
 
 console.log(JSON.stringify(config, null, 2));
 
@@ -21,8 +24,8 @@ console.log(JSON.stringify(config, null, 2));
 //       "array": {
 //         "type": "array",
 //         "enum": [
-//           "Hello World!",
-//           "Hello World 2!"
+//           "Hello world 3!",
+//           "Hello World 1!"
 //         ]
 //       }
 //     }
