@@ -1,4 +1,3 @@
-#!/usr/bin/node --harmony-proxies
 'use strict';
 
 const Mocha = require('mocha');

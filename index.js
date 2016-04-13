@@ -1,4 +1,4 @@
-#!/usr/bin/node --harmony-proxies
+#!/usr/bin/env node --harmony-proxies
 'use strict';
 
 let Config = require('./lib/config');
