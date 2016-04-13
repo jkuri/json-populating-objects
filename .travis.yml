@@ -4,16 +4,20 @@ node_js:
   - "5.0"
   - "4.0"
 
+env:
+  - NODE_VERSION=4 SCRIPT=lint
+  - NODE_VERSION=4 SCRIPT=test
+  - NODE_VERSION=5 SCRIPT=test
 os:
   - linux
   - osx
+matrix:
+  exclude:
+    - os: osx
+      env: NODE_VERSION=4 SCRIPT=lint
 
 script:
   - npm run-script $SCRIPT
-
-before_install:
-  - npm config set spin false
-  - npm config set progress false
 
 install:
   - node --version
